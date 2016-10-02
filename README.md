@@ -13,8 +13,7 @@ OpenShift is Red Hat's Platform-as-a-Service (PaaS) that allows developers to qu
 1. Create an account at http://openshift.redhat.com/
 2. Log into the account 
 3. Click on the picture below<br/>
-<a href="https://openshift.redhat.com/app/console/application_types/custom?cartridges[]=php-5.4&cartridges[]=mysql-5.5&cartridges[]=php-5.4&cartridges[]=phpmyadmin&initial_git_url=https://github.com/gautamkrishnar/openshift-quickstart&name=website" target="_blank">
-![Deploy now](http://launch-shifter.rhcloud.com/launch/light/Click to install.svg)</a>
+<a href="https://openshift.redhat.com/app/console/application_types/custom?cartridges[]=php-5.4&cartridges[]=mysql-5.5&cartridges[]=php-5.4&cartridges[]=phpmyadmin&initial_git_url=https://github.com/gautamkrishnar/openshift-quickstart&name=website" target="_blank"><img src="http://launch-shifter.rhcloud.com/launch/light/Click to install.svg" /></a>
 
 5. Scroll to the bottom and click on the button below. You can also chose to enable scaling: ![create](https://cloud.githubusercontent.com/assets/8397274/19016968/81500152-8847-11e6-9235-cab5967d37cc.png)
 6. Wait for a minute and you will be redirected to the screen below:![continue](https://cloud.githubusercontent.com/assets/8397274/19018820/064c747c-888d-11e6-818a-d565e6f30e68.png) Click on the **continue to the application overview page** link
