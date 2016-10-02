@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Welcome to OpenShift</title>
+  <title>Welcome to OpenShift Quickstart</title>
 
 <style>
 
@@ -208,58 +208,70 @@ line-height: 1.4;
 
 <section class='container'>
           <hgroup>
-            <h1>Welcome to your PHP application on OpenShift</h1>
+            <h1>Welcome to OpenShift Quickstart</h1>
           </hgroup>
 
 
         <div class="row">
           <section class='col-xs-12 col-sm-6 col-md-6'>
             <section>
-              <h2>Deploying code changes</h2>
-                <p>OpenShift uses the <a href="http://git-scm.com/">Git version control system</a> for your source code, and grants you access to it via the Secure Shell (SSH) protocol. In order to upload and download code to your application you need to give us your <a href="https://developers.openshift.com/en/managing-remote-connection.html">public SSH key</a>. You can upload it within the web console or install the <a href="https://developers.openshift.com/en/managing-client-tools.html">RHC command line tool</a> and run <code>rhc setup</code> to generate and upload your key automatically.</p>
+              <h2>About Quickstart</h2>
+                <p>OpenShift quickstart allows you to deploy your PHP/HTML application or website to openshift with the click of a single button. It has everything needed to get started. No more SSH and Git ;)</p>
 
-                <h3>Working in your local Git repository</h3>
-                <p>If you created your application from the command line and uploaded your SSH key, rhc will automatically download a copy of that source code repository (Git calls this 'cloning') to your local system.</p>
-
-                <p>If you created the application from the web console, you'll need to manually clone the repository to your local system. Copy the application's source code Git URL and then run:</p>
-
-<pre>$ git clone &lt;git_url&gt; &lt;directory_to_create&gt;
-
-# Within your project directory
-# Commit your changes and push to OpenShift
-
-$ git commit -a -m 'Some commit message'
-$ git push</pre>
-
-
-                  <ul>
-                    <li><a href="https://developers.openshift.com/en/managing-modifying-applications.html">Learn more about deploying and building your application</a></li>
-                    <li>See the README file in your local application Git repository for more information on the options for deploying applications.</li>
-                  </ul>
+                <h3>What's Included</h3>
+                <p>OpenShift quickstart contain the following components:<ul>
+                  <li>PHP 5.4</li>
+                  <li>MySQL</li>
+                  <li>PHPMyadmin</li>
+                  <li>eXtplorer file manager</li>
+                </ul>
+                Everything is preconfigured to make your deployment easier.
+                </p>
+                <h3>MySQL Database Credentials</h3>
+                <p>
+                  Note down your MySQL database credentials shown below. You can use it in your application.
+                  <pre>
+                    Important Credentials
+                    <?php
+                    $op_host=getenv("OPENSHIFT_MYSQL_DB_HOST");
+                    $op_port=getenv("OPENSHIFT_MYSQL_DB_PORT");
+                    $op_uname=getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+                    $op_pass=getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+                    $op_dbname=getenv("OPENSHIFT_APP_NAME");
+                    echo "<br/>";
+                    echo "Host: ".$op_host." or localhost";echo "<br/>";
+                    echo "Port: ".$op_port;echo "<br/>";
+                    echo "Username: ".$op_uname;echo "<br/>";
+                    echo "Password: ".$op_pass;echo "<br/>";
+                    echo "Database: ".$op_dbname;
+                    ?>
+                  </pre>
+                </p>
             </section>
 
           </section>
           <section class="col-xs-12 col-sm-6 col-md-6">
 
-                <h2>Managing your application</h2>
+                <h2>Let's get started</h2>
 
-                <h3>Web Console</h3>
-                <p>You can use the OpenShift web console to enable additional capabilities via cartridges, add collaborator access authorizations, designate custom domain aliases, and manage domain memberships.</p>
-
-                <h3>Command Line Tools</h3>
-                <p>Installing the <a href="https://developers.openshift.com/en/managing-client-tools.html">OpenShift RHC client tools</a> allows you complete control of your cloud environment. Read more on how to manage your application from the command line in our <a href="https://www.openshift.com/user-guide">User Guide</a>.
+                <h3>Adding application files</h3>
+                <p>You can use the eXtplorer file manager to manage your files. You can access the file manager at 
+                <a href="<?php  $url = "http".(!empty($_SERVER['HTTPS'])?"s":"")."://".$_SERVER['SERVER_NAME']."/fileman/"; 
+                echo $url;?>" target="_blank"><?php echo $url;?></a>
+                Add your application/website files. Don't forget to remove this index.php file from the server while adding your own files.
+                Make database connections using the database credentials.
+                </p>
+                <h3>PHPMyadmin</h3>
+                <p>PHPMyadmin is a web based tool for managing MySQL database. You can access PHPMyadmin at <a href="<?php  $url = "http".(!empty($_SERVER['HTTPS'])?"s":"")."://".$_SERVER['SERVER_NAME']."/phpmyadmin/"; 
+                echo $url;?>" target="_blank"><?php echo $url; ?></a>. Just use the credentials given at the "MySQL Database Credentials" section to log into PHPMyadmin.
                 </p>
 
-                <h2>Development Resources</h2>
-                  <ul>
-                    <li><a href="https://developers.openshift.com/en/php-overview.html">Getting Started with PHP on OpenShift</a></li>
-                    <li><a href="https://developers.openshift.com">Developer Center</a></li>
-                    <li><a href="https://www.openshift.com/user-guide">User Guide</a></li>
-                    <li><a href="https://help.openshift.com">Help Center</a></li>
-                    <li><a href="http://stackoverflow.com/questions/tagged/openshift">Stack Overflow questions for OpenShift</a></li>
-                    <li><a href="http://git-scm.com/documentation">Git documentation</a></li>
-                  </ul>
-
+                <h2>Thank You!</h2>
+                <p>
+                  Thank you for using openshift quickstart. If you liked this project, don't forget to give it a star on GitHub.
+                  <a href="https://github.com/gautamkrishnar/openshift-quickstart" target="_blank">https://github.com/gautamkrishnar/openshift-quickstart</a>
+                </p>
+                  
 
           </section>
         </div>
