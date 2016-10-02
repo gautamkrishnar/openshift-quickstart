@@ -257,8 +257,8 @@ line-height: 1.4;
                 <h3>Adding application files</h3>
                 <p>You can use the eXtplorer file manager to manage your files. You can access the file manager at 
                 <a href="<?php  $url = "http".(!empty($_SERVER['HTTPS'])?"s":"")."://".$_SERVER['SERVER_NAME']."/fileman/"; 
-                echo $url;?>" target="_blank"><?php echo $url;?></a>
-                Add your application/website files. Don't forget to remove this index.php file from the server while adding your own files.
+                echo $url;?>" target="_blank"><?php echo $url;?></a> (username & password: admin).
+                Add your application/website files. Don't forget to remove the default index.php,LICENSE and README.md files from the server while adding your own files.
                 Make database connections using the database credentials.
                 </p>
                 <h3>PHPMyadmin</h3>
